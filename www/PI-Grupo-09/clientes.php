@@ -46,17 +46,17 @@
         <div class="main-content">
 
 
-<h1>Lista de Clientes</h1>
+            <h1>Lista de Clientes</h1>
 
-<?php 
-$db = new PDO('mysql:host=localhost;dbname=pi_2_entrega;charset=utf8', 'root', 'root');
+            <?php
+            $db = new PDO('mysql:host=localhost;dbname=pi_2_entrega;charset=utf8', 'root', 'root');
 
-$resultado = $db->query('SELECT * FROM clientes');
-$clientes = $resultado->fetchAll();
+            $resultado = $db->query('SELECT * FROM clientes');
+            $clientes = $resultado->fetchAll();
 
-echo '<table>';
+            echo '<table>';
 
-echo '
+            echo '
 <tr>
     <th>Nome</th>
     <th>Telefone</th>
@@ -74,41 +74,66 @@ echo '
     </th>
 </tr>';
 
-foreach($clientes as $c) {
+            foreach ($clientes as $c) {
 
-    echo '<tr>';
+                echo '<tr>';
 
-    echo '<td>' . $c['nome'] . '</td>';
-    echo '<td>' . $c['telefone'] . '</td>';
-    echo '<td>' . $c['endereço'] . '</td>';
-    echo '<td>' . $c['complemento'] . '</td>';
-    echo '<td>' . $c['cidade'] . '</td>';
-    echo '<td>' . $c['estado'] . '</td>';
-    echo '<td>' . $c['pais'] . '</td>';
+                echo '<td>' . $c['nome'] . '</td>';
+                echo '<td>' . $c['telefone'] . '</td>';
+                echo '<td>' . $c['endereço'] . '</td>';
+                echo '<td>' . $c['complemento'] . '</td>';
+                echo '<td>' . $c['cidade'] . '</td>';
+                echo '<td>' . $c['estado'] . '</td>';
+                echo '<td>' . $c['pais'] . '</td>';
 
-    echo '<td>
+                echo '<td style="display:flex; gap:5px; align-items:center;">
     
-        <form action="editarCliente.php" method="post" class="form-inline">
+    <form action="editarCliente.php" method="post" class="form-inline">
 
-            <input type="hidden" name="id" value="' . $c['id'] . '">
-            <input type="hidden" name="nome" value="' . $c['nome'] . '">
-            <input type="hidden" name="telefone" value="' . $c['telefone'] . '">
-            <input type="hidden" name="endereco" value="' . $c['endereço'] . '">
-            <input type="hidden" name="complemento" value="' . $c['complemento'] . '">
-            <input type="hidden" name="cidade" value="' . $c['cidade'] . '">
-            <input type="hidden" name="estado" value="' . $c['estado'] . '">
-            <input type="hidden" name="pais" value="' . $c['pais'] . '">
-            <button type="submit" class="btn">Editar</button>
+        <input type="hidden" name="id" value="' . $c['id'] . '">
+        <input type="hidden" name="nome" value="' . $c['nome'] . '">
+        <input type="hidden" name="telefone" value="' . $c['telefone'] . '">
+        <input type="hidden" name="endereco" value="' . $c['endereço'] . '">
+        <input type="hidden" name="complemento" value="' . $c['complemento'] . '">
+        <input type="hidden" name="cidade" value="' . $c['cidade'] . '">
+        <input type="hidden" name="estado" value="' . $c['estado'] . '">
+        <input type="hidden" name="pais" value="' . $c['pais'] . '">
 
-        </form>
+        <button type="submit" class="btn">
+            Editar
+        </button>
 
-    </td>';
+    </form>
 
-    echo '</tr>';
-}
+    <form action="deletarCliente.php"
+          method="post"
+          onsubmit="return confirm(\'Deseja realmente excluir este cliente?\')">
 
-echo '</table>';
-?>
+        <input type="hidden" name="id" value="' . $c['id'] . '">
+
+        <button type="submit"
+                style="
+                    background:red;
+                    color:white;
+                    border:none;
+                    width:25px;
+                    height:25px;
+                    border-radius:50%;
+                    cursor:pointer;
+                    font-weight:bold;
+                ">
+            X
+        </button>
+
+    </form>
+
+</td>';
+
+                echo '</tr>';
+            }
+
+            echo '</table>';
+            ?>
 
 
 

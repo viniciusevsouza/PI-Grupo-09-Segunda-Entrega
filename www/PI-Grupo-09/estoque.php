@@ -46,17 +46,17 @@
         <div class="main-content">
 
 
-<h1>Controle de Estoque</h1>
+            <h1>Controle de Estoque</h1>
 
-<?php 
-$db = new PDO('mysql:host=localhost;dbname=pi_2_entrega;charset=utf8', 'root', 'root');
+            <?php
+            $db = new PDO('mysql:host=localhost;dbname=pi_2_entrega;charset=utf8', 'root', 'root');
 
-$resultado = $db->query('SELECT * FROM estoque');
-$estoque = $resultado->fetchAll();
+            $resultado = $db->query('SELECT * FROM estoque');
+            $estoque = $resultado->fetchAll();
 
-echo '<table>';
+            echo '<table>';
 
-echo '
+            echo '
 <tr>
     <th>Produto</th>
     <th>Quantidade</th>
@@ -68,35 +68,62 @@ echo '
     </th>
 </tr>';
 
-foreach($estoque as $e) {
+            foreach ($estoque as $e) {
 
-    $classe = '';
+                $classe = '';
 
-    if ($e['quantidade'] <= $e['alerta']) {
-        $classe = 'alerta';
-    }
+                if ($e['quantidade'] <= $e['alerta']) {
+                    $classe = 'alerta';
+                }
 
-    echo '<tr class="' . $classe . '">';
+                echo '<tr class="' . $classe . '">';
 
-    echo '<td>' . $e['produto'] . '</td>';
-    echo '<td>' . $e['quantidade'] . '</td>';
-    echo '<td>' . $e['alerta'] . '</td>';
+                echo '<td>' . $e['produto'] . '</td>';
+                echo '<td>' . $e['quantidade'] . '</td>';
+                echo '<td>' . $e['alerta'] . '</td>';
 
-    echo '<td>
-        <form action="editarEstoque.php" method="post" class="form-inline">
-            <input type="hidden" name="id" value="' . $e['id'] . '">
-            <input type="hidden" name="produto" value="' . $e['produto'] . '">
-            <input type="hidden" name="quantidade" value="' . $e['quantidade'] . '">
-            <input type="hidden" name="alerta" value="' . $e['alerta'] . '">
-            <button type="submit" class="btn">Editar</button>
-        </form>
-    </td>';
+                echo '<td style="display:flex; gap:5px; align-items:center;">
 
-    echo '</tr>';
-}
+    <form action="editarEstoque.php" method="post" class="form-inline">
 
-echo '</table>';
-?>
+        <input type="hidden" name="id" value="' . $e['id'] . '">
+        <input type="hidden" name="produto" value="' . $e['produto'] . '">
+        <input type="hidden" name="quantidade" value="' . $e['quantidade'] . '">
+        <input type="hidden" name="alerta" value="' . $e['alerta'] . '">
+
+        <button type="submit" class="btn">
+            Editar
+        </button>
+
+    </form>
+
+    <form action="deletarEstoque.php"
+          method="post"
+          onsubmit="return confirm(\'Deseja realmente excluir este item?\')">
+
+        <input type="hidden" name="id" value="' . $e['id'] . '">
+
+        <button type="submit"
+                style="
+                    background:red;
+                    color:white;
+                    border:none;
+                    width:25px;
+                    height:25px;
+                    border-radius:50%;
+                    cursor:pointer;
+                    font-weight:bold;
+                ">
+            X
+        </button>
+
+    </form>
+
+</td>';
+            }
+
+            echo '</table>';
+            ?>
 
 
 

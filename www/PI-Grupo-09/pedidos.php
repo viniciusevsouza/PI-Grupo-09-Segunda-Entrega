@@ -110,18 +110,46 @@
                 echo '<td>' . $p['data_entrega'] . '</td>';
                 echo '<td>' . $p['status'] . '</td>';
 
-                echo '<td>
-        <form action="editarPedido.php" method="post" class="form-inline">
-            <input type="hidden" name="id" value="' . $p['id'] . '">
-            <input type="hidden" name="cliente_id" value="' . $p['cliente_id'] . '">
-            <input type="hidden" name="tipo_produto" value="' . $p['tipo_produto'] . '">
-            <input type="hidden" name="quantidade" value="' . $p['quantidade'] . '">
-            <input type="hidden" name="detalhes_pedido" value="' . $p['detalhes_pedido'] . '">
-            <input type="hidden" name="data_entrega" value="' . $p['data_entrega'] . '">
-            <input type="hidden" name="status" value="' . $p['status'] . '">
-            <button type="submit" class="btn">Editar</button>
-        </form>
-    </td>';
+                echo '<td style="display:flex; gap:5px; align-items:center;">
+
+    <form action="editarPedido.php" method="post" class="form-inline">
+
+        <input type="hidden" name="id" value="' . $p['id'] . '">
+        <input type="hidden" name="cliente_id" value="' . $p['cliente_id'] . '">
+        <input type="hidden" name="tipo_produto" value="' . $p['tipo_produto'] . '">
+        <input type="hidden" name="quantidade" value="' . $p['quantidade'] . '">
+        <input type="hidden" name="detalhes_pedido" value="' . $p['detalhes_pedido'] . '">
+        <input type="hidden" name="data_entrega" value="' . $p['data_entrega'] . '">
+        <input type="hidden" name="status" value="' . $p['status'] . '">
+
+        <button type="submit" class="btn">
+            Editar
+        </button>
+
+    </form>
+
+    <form action="deletarPedido.php" method="post"
+          onsubmit="return confirm(\'Deseja realmente excluir este pedido?\')">
+
+        <input type="hidden" name="id" value="' . $p['id'] . '">
+
+        <button type="submit"
+                style="
+                    background:red;
+                    color:white;
+                    border:none;
+                    width:25px;
+                    height:25px;
+                    border-radius:50%;
+                    cursor:pointer;
+                    font-weight:bold;
+                ">
+            X
+        </button>
+
+    </form>
+
+</td>';
 
                 echo '</tr>';
             }
