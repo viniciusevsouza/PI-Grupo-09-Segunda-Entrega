@@ -86,8 +86,8 @@
                 echo '<td>' . $c['estado'] . '</td>';
                 echo '<td>' . $c['pais'] . '</td>';
 
-                echo '<td style="display:flex; gap:5px; align-items:center;">
-    
+                echo '<td class="td-actions">
+
     <form action="editarCliente.php" method="post" class="form-inline">
 
         <input type="hidden" name="id" value="' . $c['id'] . '">
@@ -107,22 +107,13 @@
 
     <form action="deletarCliente.php"
           method="post"
+          class="form-inline"
           onsubmit="return confirm(\'Deseja realmente excluir este cliente?\')">
 
         <input type="hidden" name="id" value="' . $c['id'] . '">
 
-        <button type="submit"
-                style="
-                    background:red;
-                    color:white;
-                    border:none;
-                    width:25px;
-                    height:25px;
-                    border-radius:50%;
-                    cursor:pointer;
-                    font-weight:bold;
-                ">
-            X
+        <button type="submit" class="btn btn-delete" title="Excluir" aria-label="Excluir cliente">
+            ×
         </button>
 
     </form>
@@ -141,21 +132,7 @@
 
     </div>
 
-    <script>
-        const dropdowns = document.getElementsByClassName("dropdown-btn");
-
-        for (let i = 0; i < dropdowns.length; i++) {
-            dropdowns[i].addEventListener("click", function () {
-                const dropdownContent = this.nextElementSibling;
-
-                if (dropdownContent.style.display === "block") {
-                    dropdownContent.style.display = "none";
-                } else {
-                    dropdownContent.style.display = "block";
-                }
-            });
-        }
-    </script>
+    <script src="ui.js" defer></script>
 </body>
 
 </html>

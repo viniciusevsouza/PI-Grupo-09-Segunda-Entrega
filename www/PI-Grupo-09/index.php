@@ -102,8 +102,7 @@ if (
 
     </div>
 
+    <script src="ui.js" defer></script>
 </body>
-
-</html>
 
 </html>

@@ -97,8 +97,7 @@ $id = $_POST['id'] ?? '';
 
             <div class="form-group">
                 <label>País</label>
-                <input type="text" name="pais" maxlength="2" value="<?php echo $pais; ?>"
-                    style="text-transform: uppercase;">
+                <input type="text" name="pais" maxlength="2" value="<?php echo $pais; ?>">
             </div>
             <input type="hidden" name="id" value="<?php echo $id; ?>">
 
@@ -116,21 +115,7 @@ $id = $_POST['id'] ?? '';
 
     </div>
 
-    <script>
-        const dropdowns = document.getElementsByClassName("dropdown-btn");
-
-        for (let i = 0; i < dropdowns.length; i++) {
-            dropdowns[i].addEventListener("click", function () {
-                const dropdownContent = this.nextElementSibling;
-
-                if (dropdownContent.style.display === "block") {
-                    dropdownContent.style.display = "none";
-                } else {
-                    dropdownContent.style.display = "block";
-                }
-            });
-        }
-    </script>
+    <script src="ui.js" defer></script>
 </body>
 
 </html>

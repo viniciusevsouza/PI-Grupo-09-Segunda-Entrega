@@ -82,7 +82,7 @@
                 echo '<td>' . $e['quantidade'] . '</td>';
                 echo '<td>' . $e['alerta'] . '</td>';
 
-                echo '<td style="display:flex; gap:5px; align-items:center;">
+                echo '<td class="td-actions">
 
     <form action="editarEstoque.php" method="post" class="form-inline">
 
@@ -99,22 +99,13 @@
 
     <form action="deletarEstoque.php"
           method="post"
+          class="form-inline"
           onsubmit="return confirm(\'Deseja realmente excluir este item?\')">
 
         <input type="hidden" name="id" value="' . $e['id'] . '">
 
-        <button type="submit"
-                style="
-                    background:red;
-                    color:white;
-                    border:none;
-                    width:25px;
-                    height:25px;
-                    border-radius:50%;
-                    cursor:pointer;
-                    font-weight:bold;
-                ">
-            X
+        <button type="submit" class="btn btn-delete" title="Excluir" aria-label="Excluir item">
+            ×
         </button>
 
     </form>
@@ -131,21 +122,7 @@
 
     </div>
 
-    <script>
-        const dropdowns = document.getElementsByClassName("dropdown-btn");
-
-        for (let i = 0; i < dropdowns.length; i++) {
-            dropdowns[i].addEventListener("click", function () {
-                const dropdownContent = this.nextElementSibling;
-
-                if (dropdownContent.style.display === "block") {
-                    dropdownContent.style.display = "none";
-                } else {
-                    dropdownContent.style.display = "block";
-                }
-            });
-        }
-    </script>
+    <script src="ui.js" defer></script>
 </body>
 
 </html>

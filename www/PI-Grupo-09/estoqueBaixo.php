@@ -76,7 +76,7 @@ foreach($estoque as $e) {
     echo '<td>' . $e['quantidade'] . '</td>';
     echo '<td>' . $e['alerta'] . '</td>';
 
-    echo '<td>
+    echo '<td class="td-actions">
         <form action="editarEstoque.php" method="post" class="form-inline">
             <input type="hidden" name="id" value="' . $e['id'] . '">
             <input type="hidden" name="produto" value="' . $e['produto'] . '">
@@ -98,21 +98,7 @@ echo '</table>';
 
     </div>
 
-    <script>
-        const dropdowns = document.getElementsByClassName("dropdown-btn");
-
-        for (let i = 0; i < dropdowns.length; i++) {
-            dropdowns[i].addEventListener("click", function () {
-                const dropdownContent = this.nextElementSibling;
-
-                if (dropdownContent.style.display === "block") {
-                    dropdownContent.style.display = "none";
-                } else {
-                    dropdownContent.style.display = "block";
-                }
-            });
-        }
-    </script>
+    <script src="ui.js" defer></script>
 </body>
 
 </html>
