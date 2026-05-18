@@ -1,6 +1,6 @@
 # Senac 2026 1 PI Grupo 9
 
-#  Projeto Integrador Senac 2026 - GestãoFácil
+#  Projeto Integrador Senac 2026 - Gestão Fácil
 
 O Gestão Fácil é uma aplicação web desenvolvida para simplificar a administração de pequenos negócios. O sistema foca em três pilares principais: gestão de carteira de clientes, acompanhamento de pedidos e monitoramento inteligente de estoque com alertas automáticos de escassez.
 
@@ -12,7 +12,7 @@ O Gestão Fácil é uma aplicação web desenvolvida para simplificar a administ
 
 ## Tecnologias utilizadas
 - **PHP** (Lógica de Backend e Sessões)
-- **HTML5 & CSS3** (Interface Estruturada)
+- **HTML5, CSS3 e JS** (Interface Estruturada)
 - **MySQL** (Banco de Dados Relacional)
 - **Apache/Localhost** (Ambiente de Desenvolvimento)
 
@@ -24,14 +24,15 @@ O Gestão Fácil é uma aplicação web desenvolvida para simplificar a administ
 - **Controle de estoque (estoque.php):** Planilha administrativa de produtos que sinaliza automaticamente em cor amarela/laranja quando a quantidade atinge o limite do alerta.
 
 ## Instalação e execução local
-1. Clonar ou extrair o repositório 📁[`/PI-Grupo-09`](https://github.com/viniciusevsouza/PI-Grupo-09-Segunda-Entrega/tree/main/www/PI-Grupo-09) dentro do diretório padrão do seu servidor local (ex: htdocs no XAMPP);
+1. Clonar ou extrair o repositório 📁[`/PI-Grupo-09`](https://github.com/viniciusevsouza/PI-Grupo-09-Segunda-Entrega/tree/main/PI-Grupo-09) dentro do diretório padrão do seu servidor local (ex: htdocs no XAMPP e www no UwAmp);
 2. Inicializar os serviços do Apache e MySQL através do painel de controle do ambiente escolhido;
 3. Importar o arquivo de banco de dados estruturado 🛢[`/database.sql`](https://github.com/viniciusevsouza/PI-Grupo-09-Segunda-Entrega/blob/main/database.sql) no ambiente do phpMyAdmin;
 4. Abrir o navegador web de sua preferência e acessar o endereço local correspondente: http://localhost/PI-Grupo-09/index.php.
 
-## Demonstração
+## Demonstração e documentação
+[`Clique aqui`](video.mp4) para baixar e assitir ao vídeo de demonstração do Gestão Fácil.
 
-[`Clique aqui`](https://github.com/viniciusevsouza/PI-Grupo-09-Segunda-Entrega/tree/main/www/PI-Grupo-09) para assitir ao vídeo de demonstração do GestãoFácil.
+[`Visão de produto, Personas e Jornadas do Usuário`](PI.pdf).
 
 ##  Autores
 
