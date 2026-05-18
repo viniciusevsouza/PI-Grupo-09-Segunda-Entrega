@@ -12,7 +12,7 @@ O Gestão Fácil é uma aplicação web desenvolvida para simplificar a administ
 
 ## Tecnologias utilizadas
 - **PHP** (Lógica de Backend e Sessões)
-- **HTML5 & CSS3** (Interface Estruturada)
+- **HTML5, CSS3 e JS** (Interface Estruturada)
 - **MySQL** (Banco de Dados Relacional)
 - **Apache/Localhost** (Ambiente de Desenvolvimento)
 
@@ -24,7 +24,7 @@ O Gestão Fácil é uma aplicação web desenvolvida para simplificar a administ
 - **Controle de estoque (estoque.php):** Planilha administrativa de produtos que sinaliza automaticamente em cor amarela/laranja quando a quantidade atinge o limite do alerta.
 
 ## Instalação e execução local
-1. Clonar ou extrair o repositório 📁[`/PI-Grupo-09`](https://github.com/viniciusevsouza/PI-Grupo-09-Segunda-Entrega/tree/main/www/PI-Grupo-09) dentro do diretório padrão do seu servidor local (ex: htdocs no XAMPP);
+1. Clonar ou extrair o repositório 📁[`/PI-Grupo-09`](https://github.com/viniciusevsouza/PI-Grupo-09-Segunda-Entrega/tree/main/PI-Grupo-09) dentro do diretório padrão do seu servidor local (ex: htdocs no XAMPP e www no UwAmp);
 2. Inicializar os serviços do Apache e MySQL através do painel de controle do ambiente escolhido;
 3. Importar o arquivo de banco de dados estruturado 🛢[`/database.sql`](https://github.com/viniciusevsouza/PI-Grupo-09-Segunda-Entrega/blob/main/database.sql) no ambiente do phpMyAdmin;
 4. Abrir o navegador web de sua preferência e acessar o endereço local correspondente: http://localhost/PI-Grupo-09/index.php.
