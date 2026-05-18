@@ -26,8 +26,9 @@ O Gestão Fácil é uma aplicação web desenvolvida para simplificar a administ
 ## Instalação e execução local
 1. Clonar ou extrair o repositório 📁[`/PI-Grupo-09`](https://github.com/viniciusevsouza/PI-Grupo-09-Segunda-Entrega/tree/main/PI-Grupo-09) dentro do diretório padrão do seu servidor local (ex: htdocs no XAMPP e www no UwAmp);
 2. Inicializar os serviços do Apache e MySQL através do painel de controle do ambiente escolhido;
-3. Importar o arquivo de banco de dados estruturado 🛢[`/database.sql`](https://github.com/viniciusevsouza/PI-Grupo-09-Segunda-Entrega/blob/main/database.sql) no ambiente do phpMyAdmin;
+3. Importar o arquivo de banco de dados estruturado 🛢[`/database.sql`](https://github.com/viniciusevsouza/PI-Grupo-09-Segunda-Entrega/blob/main/database.sql) no ambiente do phpMyAdmin. Usuário e senha padrão do ambiente: root;
 4. Abrir o navegador web de sua preferência e acessar o endereço local correspondente: http://localhost/PI-Grupo-09/index.php.
+5. Usuário do sistema: carla | Senha: 12345
 
 ## Demonstração e documentação
 [`Clique aqui`](video.mp4) para baixar e assitir ao vídeo de demonstração do Gestão Fácil.
