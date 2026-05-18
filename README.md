@@ -1,6 +1,6 @@
 # Senac 2026 1 PI Grupo 9
 
-#  Projeto Integrador Senac 2026 - GestãoFácil
+#  Projeto Integrador Senac 2026 - Gestão Fácil
 
 O Gestão Fácil é uma aplicação web desenvolvida para simplificar a administração de pequenos negócios. O sistema foca em três pilares principais: gestão de carteira de clientes, acompanhamento de pedidos e monitoramento inteligente de estoque com alertas automáticos de escassez.
 
@@ -29,9 +29,10 @@ O Gestão Fácil é uma aplicação web desenvolvida para simplificar a administ
 3. Importar o arquivo de banco de dados estruturado 🛢[`/database.sql`](https://github.com/viniciusevsouza/PI-Grupo-09-Segunda-Entrega/blob/main/database.sql) no ambiente do phpMyAdmin;
 4. Abrir o navegador web de sua preferência e acessar o endereço local correspondente: http://localhost/PI-Grupo-09/index.php.
 
-## Demonstração
+## Demonstração e documentação
+[`Clique aqui`](video.mp4) para baixar e assitir ao vídeo de demonstração do Gestão Fácil.
 
-[`Clique aqui`](https://github.com/viniciusevsouza/PI-Grupo-09-Segunda-Entrega/tree/main/www/PI-Grupo-09) para assitir ao vídeo de demonstração do GestãoFácil.
+[`Visão de produto, Personas e Jornadas do Usuário`](PI.pdf).
 
 ##  Autores
 
